@@ -9,7 +9,7 @@ Abstract: Multi-Layer Perceptron (MLP) neural net with customizable activation a
 """
 
 
-class Loss:
+class Loss(Enum):
     """
     The type of loss to use during training.
     """
@@ -17,7 +17,7 @@ class Loss:
     mse = 'mse'
 
 
-class LayerType:
+class LayerType(Enum):
     """
     The type of layer to use. Activation layers are (obviously) used for activating outputs.
     Regularization layers manipulate these outputs for better learning. The input to the neural network
@@ -27,7 +27,7 @@ class LayerType:
     regularization = 'regularization'
 
 
-class Regularization:
+class Regularization(Enum):
     """
     The type of regularization for your regularization layer. Note that dropout, l1, and l2 require
     parameters such as the dropout rate and regularization lambdas, respectively.
