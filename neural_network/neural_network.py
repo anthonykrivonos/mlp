@@ -556,7 +556,7 @@ class Layer:
             softmax = self.activate(x)
             # Return the derivative of the softmax
             return softmax * (np.ones(x.shape) - softmax)
-        return x
+        return 1
 
 
 """
